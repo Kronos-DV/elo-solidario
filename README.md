@@ -1,14 +1,26 @@
 # Elo Solidário
 
-Site acessível de uma ONG fictícia, desenvolvido como projeto acadêmico com apoio de IA. Feito com HTML5, CSS e JavaScript puros, sem instalação de dependências.
+Projeto acadêmico de um site para uma ONG fictícia, desenvolvido com HTML5, CSS e JavaScript. O objetivo é praticar a organização de páginas, a estrutura semântica e a criação de um formulário que oriente o preenchimento.
 
-## Abrir e estudar
+O desenvolvimento contou com apoio de IA durante o aprendizado. A organização é fictícia e não recebe doações ou cadastros reais.
 
-1. Abra esta pasta no VS Code, ou abra `elo-solidario.code-workspace`.
-2. Abra `index.html` no navegador com um duplo clique.
-3. Estude primeiro os arquivos HTML, depois `assets/css/style.css` e, por último, `assets/js/formulario.js`.
+## O que o projeto apresenta
 
-## Organização
+| Página | Conteúdo |
+| --- | --- |
+| [Início](index.html) | Apresentação da ONG, missão, imagem ilustrativa e contatos de exemplo. |
+| [Projetos](projetos.html) | Iniciativas de alimentação e educação, voluntariado e campanhas de doação. |
+| [Cadastro](cadastro.html) | Formulário demonstrativo dividido em dados pessoais, contato e endereço. |
+
+## Como abrir
+
+1. Baixe o repositório em **Code → Download ZIP** e extraia a pasta, ou clone-o com Git.
+2. Abra a pasta no VS Code. O arquivo `elo-solidario.code-workspace` também pode ser usado.
+3. Abra `index.html` no navegador.
+
+Não é necessário instalar dependências ou iniciar um servidor.
+
+## Estrutura
 
 ```text
 elo-solidario/
@@ -24,31 +36,32 @@ elo-solidario/
 │   ├── voluntarios-600.jpg
 │   └── voluntarios-600.webp
 ├── README.md
+├── VALIDACAO.md
 └── elo-solidario.code-workspace
 ```
 
-## Funcionalidades
+## Formulário e acessibilidade
 
-- Navegação entre as três páginas e link para pular ao conteúdo.
-- Agrupamentos com `fieldset` e `legend`; rótulos associados aos campos.
-- Campos obrigatórios, formato de e-mail, padrões de CPF, telefone e CEP.
-- Máscaras de digitação, cálculo dos dígitos verificadores do CPF e bloqueio de data futura.
-- Imagens responsivas em JPG e WebP com texto alternativo.
-- Layout adaptado para telas menores.
+Os campos estão agrupados com `fieldset` e `legend`, e cada campo possui um rótulo associado. As páginas incluem navegação consistente, link para pular ao conteúdo, foco visível e imagens com texto alternativo.
 
-O formulário não envia nem armazena dados. Use informações fictícias nos testes. O CPF tem apenas seus dígitos verificadores conferidos; telefone e CEP têm o formato conferido, sem consulta de existência. Não há pagamentos reais.
+O formulário utiliza campos obrigatórios, verificação do formato de e-mail, bloqueio de data futura e máscaras de CPF, telefone e CEP. O JavaScript também confere os dígitos verificadores do CPF.
 
-## Imagem
+**Máscara e validação têm funções diferentes:** a máscara organiza a digitação; a validação verifica as regras definidas. A conferência do CPF não consulta uma base oficial, e telefone e CEP são verificados apenas quanto ao formato.
 
-Cena ilustrativa gerada com a ferramenta integrada de imagens por IA: voluntários organizando alimentos em caixas para doação. Não representa uma ação real. Foram produzidas versões comprimidas de 1200 × 800 e 600 × 400 pixels em JPG e WebP.
+Nenhum dado é enviado ou armazenado. Use informações de teste ao explorar o formulário.
 
-## Verificação
+## Verificações realizadas
 
-Foram conferidos os caminhos locais, identificadores, rótulos e funções de máscara/CPF. Isso não equivale à certificação de acessibilidade. As três páginas foram submetidas ao Nu Html Checker do W3C (vnu 26.9.7) e concluíram a verificação sem erros nem avisos. Foi corrigido o autocomplete do telefone para tel. Consulte VALIDACAO.md.
+- Três páginas verificadas no **Nu Html Checker do W3C, versão 26.9.7**, sem erros ou avisos no resultado final.
+- Caminhos locais, identificadores e associações entre rótulos e campos conferidos.
+- Funções de máscara e cálculo dos dígitos do CPF verificadas com testes locais.
 
-Teste no navegador: campos vazios, CPF com dígitos incorretos, telefones de 10 e 11 dígitos, CEP incompleto, edição no meio do campo e data futura. Navegue usando Tab para conferir o foco.
+O [relatório de validação](VALIDACAO.md) registra os resultados e a correção realizada. A validação HTML não substitui uma auditoria completa de acessibilidade ou testes de interação.
 
-## Entrega por link
+## Recursos de imagem
 
-Um repositório público no GitHub permite consultar e baixar o código completo. O link do repositório é para o código; hospedar a página navegável exige um serviço como GitHub Pages.
+A cena de voluntários organizando alimentos foi gerada por IA e não representa uma ação real. A pasta `imagens` contém versões JPG e WebP, nas dimensões de 1200 × 800 e 600 × 400 pixels.
 
+## Para continuar aprendendo
+
+A sequência sugerida de estudo é: estrutura dos arquivos HTML, estilos em CSS e comportamento do formulário em JavaScript. Entre os próximos exercícios estão testar a navegação por teclado, editar valores no meio dos campos e compreender como uma futura validação no servidor complementaria a do navegador.
