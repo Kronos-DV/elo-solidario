@@ -44,10 +44,11 @@ Cena ilustrativa gerada com a ferramenta integrada de imagens por IA: voluntári
 
 ## Verificação
 
-Foram conferidos os caminhos locais, identificadores, rótulos e funções de máscara/CPF. Isso não equivale à certificação de acessibilidade. A validação oficial no W3C ainda precisa ser realizada: envie separadamente os três HTML em https://validator.w3.org/#validate_by_upload.
+Foram conferidos os caminhos locais, identificadores, rótulos e funções de máscara/CPF. Isso não equivale à certificação de acessibilidade. As três páginas foram submetidas ao Nu Html Checker do W3C (vnu 26.9.7) e concluíram a verificação sem erros nem avisos. Foi corrigido o autocomplete do telefone para tel. Consulte VALIDACAO.md.
 
 Teste no navegador: campos vazios, CPF com dígitos incorretos, telefones de 10 e 11 dígitos, CEP incompleto, edição no meio do campo e data futura. Navegue usando Tab para conferir o foco.
 
 ## Entrega por link
 
 Um repositório público no GitHub permite consultar e baixar o código completo. O link do repositório é para o código; hospedar a página navegável exige um serviço como GitHub Pages.
+
