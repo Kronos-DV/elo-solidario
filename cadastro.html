@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elo Solidário: projeto acadêmico de uma ONG fictícia.">
+    <title>Elo Solidário | Cadastro</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/formulario.js" defer></script>
+</head>
+<body>
+    <a class="skip" href="#conteudo">Ir para o conteúdo principal</a>
+    <header><div class="wrap header">
+        <a class="brand" href="index.html"><span aria-hidden="true">E</span>Elo Solidário</a>
+        <nav aria-label="Navegação principal"><a href="index.html">Início</a><a href="projetos.html">Projetos</a><a href="cadastro.html" aria-current="page">Cadastro</a></nav>
+    </div></header>
+    <main id="conteudo" class="wrap">
+        <div class="intro"><p class="eyebrow">Faça parte</p><h1>Comece com a vontade de ajudar.</h1><p class="lead">Preencha o formulário demonstrativo de participação.</p></div>
+        <div class="form-layout"><aside class="form-aside"><h2>Um primeiro passo</h2><p>Reunimos dados pessoais, contato e endereço em três etapas de preenchimento.</p><hr><p>Use dados de teste. Esta demonstração não envia nem armazena informações.</p><p>Campos com * são obrigatórios.</p></aside>
+            <form id="formulario">
+                <noscript><p>Ative o JavaScript para testar as máscaras. O botão permanece desativado sem JavaScript.</p></noscript>
+                <fieldset><legend>1. Dados pessoais</legend><div class="fields">                    <div><label for="nome">Nome completo *</label>
+                        <input type="text" id="nome" name="nome" required autocomplete="name" minlength="3" maxlength="100" >
+                        
+                    </div>                    <div><label for="cpf">CPF *</label>
+                        <input type="text" id="cpf" name="cpf" required inputmode="numeric" pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}" title="Use 000.000.000-00." aria-describedby="ajuda-cpf">
+                        <small class="hint" id="ajuda-cpf">Digite 11 números; a pontuação é automática.</small>
+                    </div>                    <div><label for="nascimento">Data de nascimento *</label>
+                        <input type="date" id="nascimento" name="nascimento" required autocomplete="bday" >
+                        
+                    </div></div></fieldset>
+                <fieldset><legend>2. Informações de contato</legend><div class="fields">                    <div><label for="email">E-mail *</label>
+                        <input type="email" id="email" name="email" required autocomplete="email" maxlength="254" >
+                        
+                    </div>                    <div><label for="telefone">Telefone com DDD *</label>
+                        <input type="tel" id="telefone" name="telefone" required autocomplete="tel-national" pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}" title="Use (00) 0000-0000 ou (00) 00000-0000." aria-describedby="ajuda-telefone">
+                        <small class="hint" id="ajuda-telefone">10 ou 11 números, sem o código do país.</small>
+                    </div></div></fieldset>
+                <fieldset><legend>3. Endereço</legend><div class="fields">                    <div><label for="cep">CEP *</label>
+                        <input type="text" id="cep" name="cep" required autocomplete="postal-code" inputmode="numeric" pattern="[0-9]{5}-[0-9]{3}" title="Use 00000-000." aria-describedby="ajuda-cep">
+                        <small class="hint" id="ajuda-cep">Digite 8 números.</small>
+                    </div>                    <div><label for="logradouro">Logradouro *</label>
+                        <input type="text" id="logradouro" name="logradouro" required autocomplete="address-line1" maxlength="150" >
+                        
+                    </div>                    <div><label for="numero">Número *</label>
+                        <input type="text" id="numero" name="numero" required maxlength="15" aria-describedby="ajuda-numero">
+                        <small class="hint" id="ajuda-numero">Exemplos: 123, 12A ou s/n.</small>
+                    </div>                    <div><label for="complemento">Complemento</label>
+                        <input type="text" id="complemento" name="complemento"  autocomplete="address-line2" maxlength="100" >
+                        
+                    </div>                    <div><label for="bairro">Bairro *</label>
+                        <input type="text" id="bairro" name="bairro" required maxlength="100" >
+                        
+                    </div>                    <div><label for="cidade">Cidade *</label>
+                        <input type="text" id="cidade" name="cidade" required autocomplete="address-level2" maxlength="100" >
+                        
+                    </div><div><label for="estado">Estado *</label><select id="estado" name="estado" autocomplete="address-level1" required><option value="">Selecione</option><option value="AC">Acre</option>
+<option value="AL">Alagoas</option>
+<option value="AP">Amapá</option>
+<option value="AM">Amazonas</option>
+<option value="BA">Bahia</option>
+<option value="CE">Ceará</option>
+<option value="DF">Distrito Federal</option>
+<option value="ES">Espírito Santo</option>
+<option value="GO">Goiás</option>
+<option value="MA">Maranhão</option>
+<option value="MT">Mato Grosso</option>
+<option value="MS">Mato Grosso do Sul</option>
+<option value="MG">Minas Gerais</option>
+<option value="PA">Pará</option>
+<option value="PB">Paraíba</option>
+<option value="PR">Paraná</option>
+<option value="PE">Pernambuco</option>
+<option value="PI">Piauí</option>
+<option value="RJ">Rio de Janeiro</option>
+<option value="RN">Rio Grande do Norte</option>
+<option value="RS">Rio Grande do Sul</option>
+<option value="RO">Rondônia</option>
+<option value="RR">Roraima</option>
+<option value="SC">Santa Catarina</option>
+<option value="SP">São Paulo</option>
+<option value="SE">Sergipe</option>
+<option value="TO">Tocantins</option></select></div></div></fieldset>
+                <div class="form-actions"><button id="validar" type="submit" disabled>Validar cadastro de demonstração</button><p id="resultado" class="status" role="status"></p></div>
+            </form>
+        </div>
+    </main>
+    <footer><div class="wrap footer"><p>Elo Solidário</p><p>Projeto acadêmico · ONG fictícia · Sem arrecadação real</p></div></footer>
+</body>
+</html>

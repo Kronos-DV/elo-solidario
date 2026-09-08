@@ -51,4 +51,3 @@ Teste no navegador: campos vazios, CPF com dígitos incorretos, telefones de 10 
 ## Entrega por link
 
 Um repositório público no GitHub permite consultar e baixar o código completo. O link do repositório é para o código; hospedar a página navegável exige um serviço como GitHub Pages.
-
