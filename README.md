@@ -4,6 +4,14 @@ Projeto acadêmico de um site para uma ONG fictícia, desenvolvido com HTML5, CS
 
 O desenvolvimento contou com apoio de IA durante o aprendizado. A organização é fictícia e não recebe doações ou cadastros reais.
 
+## Contexto acadêmico e aprendizado
+
+Este projeto faz parte da disciplina de **Desenvolvimento Web Frontend**, com foco em **HTML5**, do curso de Análise e Desenvolvimento de Sistemas. O foco de estudo é compreender a estrutura das páginas, a organização semântica do conteúdo, a navegação por links, o uso de imagens e a construção de formulários com rótulos e agrupamentos.
+
+CSS e JavaScript complementam a apresentação e o comportamento do site. O projeto foi desenvolvido com apoio de IA; os recursos implementados servem como material de estudo e revisão, sem representar domínio independente de todos esses conceitos.
+
+O acompanhamento dos estudos está em [Jornada de programação](https://github.com/Kronos-DV/jornada-programacao). O Elo Solidário permanece neste repositório próprio, separado dos exercícios introdutórios de JavaScript.
+
 ## O que o projeto apresenta
 
 | Página | Conteúdo |
