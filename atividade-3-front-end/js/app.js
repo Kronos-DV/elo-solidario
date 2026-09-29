@@ -28,7 +28,8 @@ function register(id) {
 function submitInterest(form) {
   const result = validateInterest(form); const status = form.querySelector('#form-status');
   if (!result.valid) { status.textContent = 'Revise os campos indicados para continuar.'; return; }
-  status.textContent = `Obrigado, ${result.values.name.trim()}! Veja as oportunidades de ${result.values.cause}.`; navigate('causas');
+  const message = `Obrigado, ${result.values.name.trim()}! Veja as oportunidades de ${result.values.cause}.`;
+  status.textContent = message; statusMessage(message); navigate('causas');
 }
 
 function statusMessage(message) {

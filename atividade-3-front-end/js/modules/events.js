@@ -14,6 +14,12 @@ export function bindEvents({ root, onRegister, onInterest, onRoute }) {
     if (!event.target.matches('#interest-form')) return;
     event.preventDefault(); onInterest(event.target);
   });
-  root.addEventListener('input', event => { if (event.target.matches('[aria-invalid="true"]')) event.target.removeAttribute('aria-invalid'); });
+  root.addEventListener('input', event => {
+    const field = event.target;
+    if (!field.matches('[aria-invalid="true"]')) return;
+    field.removeAttribute('aria-invalid');
+    const hint = root.querySelector(`#${field.name}-error`);
+    if (hint) hint.textContent = '';
+  });
   root.addEventListener('click', event => { if (event.target.closest('a[href^="#"]')) document.querySelector('#app')?.focus({ preventScroll: true }); });
 }
