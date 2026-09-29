@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#133b37">
+  <meta name="description" content="A Rede Solidária aproxima pessoas de oportunidades para cuidar da comunidade.">
+  <title>Rede Solidária — participe de uma causa</title>
+  <link rel="icon" href="../imagens/marca.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script type="module" src="../js/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Rede Solidária, início"><img src="../imagens/marca.svg" alt=""><span>rede<span class="brand-light">solidária</span></span></a>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="#causas">Causas</a><a href="#impacto">Nosso impacto</a><a href="#como-ajudar">Como ajudar</a>
+      <a class="button button-small" href="#participar">Quero participar <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main id="conteudo">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-copy"><p class="eyebrow">Pequenas ações, grandes encontros</p>
+        <h1 id="hero-title">A sua comunidade tem lugar para você.</h1>
+        <p class="hero-text">Encontre uma causa perto de casa, conheça quem já está fazendo a diferença e participe do seu jeito.</p>
+        <a class="button" href="#causas">Encontrar uma causa <span aria-hidden="true">→</span></a>
+        <p class="hero-note">Sem experiência prévia. Só vontade de fazer parte.</p>
+      </div>
+      <div class="hero-visual" role="img" aria-label="Ilustração de pessoas cultivando juntas uma horta comunitária"><img src="../imagens/comunidade.svg" alt=""></div>
+    </section>
+    <section class="section causes" id="causas" aria-labelledby="causes-title">
+      <div class="section-intro"><p class="eyebrow">Escolha por onde começar</p><h2 id="causes-title">Causas que precisam de você por perto.</h2><p>Uma hora do seu tempo já pode abrir novas possibilidades.</p></div>
+      <div class="cause-grid">
+        <article class="cause-card"><div class="cause-art art-education" aria-hidden="true"><span>✎</span></div><div class="cause-body"><p class="tag">Educação</p><h3>Aprender em conjunto</h3><p>Compartilhe conhecimentos e incentive novas descobertas com crianças e jovens.</p><a class="text-link" href="#participar">Ver como ajudar <span aria-hidden="true">→</span></a></div></article>
+        <article class="cause-card"><div class="cause-art art-food" aria-hidden="true"><span>♡</span></div><div class="cause-body"><p class="tag">Segurança alimentar</p><h3>Uma mesa mais acolhedora</h3><p>Apoie cozinhas comunitárias e redes locais de distribuição de alimentos.</p><a class="text-link" href="#participar">Ver como ajudar <span aria-hidden="true">→</span></a></div></article>
+        <article class="cause-card"><div class="cause-art art-green" aria-hidden="true"><span>✿</span></div><div class="cause-body"><p class="tag">Meio ambiente</p><h3>Mais verde, mais comunidade</h3><p>Cuide de praças, hortas urbanas e espaços compartilhados do bairro.</p><a class="text-link" href="#participar">Ver como ajudar <span aria-hidden="true">→</span></a></div></article>
+      </div>
+    </section>
+    <section class="impact" id="impacto" aria-labelledby="impact-title"><div class="impact-copy"><p class="eyebrow eyebrow-light">Juntos, chegamos mais longe</p><h2 id="impact-title">Quando a vizinhança se encontra, todo mundo ganha.</h2><p>Conectamos pessoas, organizações sociais e iniciativas locais para tornar a participação simples, próxima e transparente.</p></div><div class="impact-stat"><span class="stat-mark" aria-hidden="true">∞</span><p>Uma rede que cresce com cada pessoa que participa.</p></div></section>
+    <section class="section how" id="como-ajudar" aria-labelledby="how-title"><div class="section-intro"><p class="eyebrow">Um passo de cada vez</p><h2 id="how-title">Fazer parte é mais simples do que parece.</h2></div><ol class="steps"><li><span class="step-number">01</span><div><h3>Escolha uma causa</h3><p>Encontre uma iniciativa que combine com seus interesses e sua rotina.</p></div></li><li><span class="step-number">02</span><div><h3>Conheça a oportunidade</h3><p>Veja o que será feito, onde acontece e como você pode contribuir.</p></div></li><li><span class="step-number">03</span><div><h3>Participe no seu ritmo</h3><p>Comece com uma ação. A comunidade cresce com cada encontro.</p></div></li></ol></section>
+    <section class="join" id="participar" aria-labelledby="join-title"><div class="join-copy"><p class="eyebrow eyebrow-light">Dê o próximo passo</p><h2 id="join-title">Vamos encontrar seu jeito de ajudar?</h2><p>Conte qual causa combina com você. Esta demonstração não envia nem guarda os dados informados.</p></div><form id="interest-form" class="interest-form">
+      <div class="form-field"><label for="name">Seu nome</label><input id="name" name="name" type="text" autocomplete="name" minlength="2" required aria-describedby="name-hint"><small id="name-hint">Use pelo menos dois caracteres.</small></div>
+      <div class="form-field"><label for="email">Seu e-mail</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+      <div class="form-field"><label for="cause">Tenho interesse em</label><select id="cause" name="cause" required><option value="">Escolha uma causa</option><option>Educação</option><option>Segurança alimentar</option><option>Meio ambiente</option></select></div>
+      <button class="button button-gold" type="submit">Ver oportunidades <span aria-hidden="true">→</span></button>
+      <p id="form-status" class="form-status" role="status" aria-live="polite" tabindex="-1"></p>
+    </form></section>
+    <section class="section questions" aria-labelledby="questions-title"><div class="section-intro"><p class="eyebrow">Dúvidas frequentes</p><h2 id="questions-title">Antes de começar</h2></div><div class="faq"><details><summary>Preciso ter experiência como voluntário?</summary><p>Não. Cada oportunidade informa o que será feito e se algum conhecimento específico é necessário.</p></details><details><summary>Quanto tempo preciso dedicar?</summary><p>As iniciativas têm durações diferentes. Escolha uma atividade que caiba na sua disponibilidade.</p></details><details><summary>Este formulário faz uma inscrição real?</summary><p>Não. Esta é uma demonstração acadêmica. Os campos mostram validação local e não enviam nem armazenam informações.</p></details></div></section>
+  </main>
+  <footer class="site-footer"><a class="brand brand-inverse" href="#inicio"><img src="../imagens/marca-inverse.svg" alt=""><span>rede<span class="brand-light">solidária</span></span></a><p>Pequenas ações, mudanças que chegam mais longe.</p><small>Projeto acadêmico demonstrativo. Não recebe doações nem inscrições reais.</small></footer>
+</body>
+</html>
