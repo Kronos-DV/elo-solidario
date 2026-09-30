@@ -1,0 +1,72 @@
+name: Build and deploy Activity 4
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'atividade-4-front-end/**'
+      - '.github/workflows/deploy-activity-4.yml'
+      - 'index.html'
+      - 'projetos.html'
+      - 'cadastro.html'
+      - 'assets/**'
+      - 'imagens/**'
+      - 'atividade-2-front-end/**'
+      - 'atividade-3-front-end/**'
+  pull_request:
+    branches: [develop, main]
+    paths:
+      - 'atividade-4-front-end/**'
+      - '.github/workflows/deploy-activity-4.yml'
+      - 'index.html'
+      - 'projetos.html'
+      - 'cadastro.html'
+      - 'assets/**'
+      - 'imagens/**'
+      - 'atividade-2-front-end/**'
+      - 'atividade-3-front-end/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Build production assets
+        run: npm --prefix atividade-4-front-end run build
+      - name: Assemble complete site without replacing existing project pages
+        run: |
+          mkdir -p _site/atividade-2-front-end _site/atividade-3-front-end _site/atividade-4-front-end
+          cp index.html projetos.html cadastro.html _site/
+          cp -R assets imagens _site/
+          cp -R atividade-2-front-end/. _site/atividade-2-front-end/
+          cp -R atividade-3-front-end/html atividade-3-front-end/css atividade-3-front-end/imagens atividade-3-front-end/js _site/atividade-3-front-end/
+          cp -R atividade-4-front-end/dist/. _site/atividade-4-front-end/
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
